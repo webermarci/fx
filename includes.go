@@ -1,8 +1,8 @@
 package fx
 
-func Includes[T any](slice []T, fn func(value T) bool) bool {
+func Includes[T Ordered](slice []T, value T) bool {
 	for _, e := range slice {
-		if fn(e) {
+		if e == value {
 			return true
 		}
 	}
