@@ -12,6 +12,15 @@ func TestMapInt(t *testing.T) {
 	if r[0] != 2 {
 		t.Fatal("incorrect calculation")
 	}
+	if r[1] != 4 {
+		t.Fatal("incorrect calculation")
+	}
+	if r[2] != 6 {
+		t.Fatal("incorrect calculation")
+	}
+	if r[3] != 8 {
+		t.Fatal("incorrect calculation")
+	}
 }
 
 func TestMapString(t *testing.T) {
@@ -19,6 +28,12 @@ func TestMapString(t *testing.T) {
 		return fmt.Sprintf("%s_test", v)
 	})
 	if r[0] != "hello_test" {
+		t.Fatal("incorrect concat")
+	}
+	if r[1] != "hi_test" {
+		t.Fatal("incorrect concat")
+	}
+	if r[2] != "hey_test" {
 		t.Fatal("incorrect concat")
 	}
 }

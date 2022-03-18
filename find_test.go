@@ -6,20 +6,26 @@ import (
 )
 
 func TestFindInt(t *testing.T) {
-	_, f := Find([]int{1, 2, 3, 4}, func(v int) bool {
+	r, f := Find([]int{1, 2, 3, 4}, func(v int) bool {
 		return v == 2
 	})
 	if !f {
 		t.Fatal("not found")
 	}
+	if r != 2 {
+		t.Fatal("should be 2")
+	}
 }
 
 func TestFindString(t *testing.T) {
-	_, f := Find([]string{"hello", "hi", "hey"}, func(v string) bool {
+	r, f := Find([]string{"hello", "hi", "hey"}, func(v string) bool {
 		return v == "hi"
 	})
 	if !f {
 		t.Fatal("not found")
+	}
+	if r != "hi" {
+		t.Fatal("should be hi")
 	}
 }
 

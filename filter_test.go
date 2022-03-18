@@ -13,6 +13,12 @@ func TestFilterInt(t *testing.T) {
 	if len(r) != 2 {
 		log.Fatal("not two items found")
 	}
+	if r[0] != 3 {
+		log.Fatal("should be 3")
+	}
+	if r[1] != 4 {
+		log.Fatal("should be 3")
+	}
 }
 
 func TestFilterString(t *testing.T) {
@@ -21,6 +27,12 @@ func TestFilterString(t *testing.T) {
 	})
 	if len(r) != 2 {
 		log.Fatal("not two items found")
+	}
+	if r[0] != "hi" {
+		log.Fatal("should be hi")
+	}
+	if r[1] != "hey" {
+		log.Fatal("should be hey")
 	}
 }
 
