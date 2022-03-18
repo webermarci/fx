@@ -1,8 +1,6 @@
 package fx
 
-import "golang.org/x/exp/constraints"
-
-func Max[T constraints.Ordered](slice []T) T {
+func Max[T Ordered](slice []T) T {
 	if len(slice) == 0 {
 		return *new(T)
 	}
